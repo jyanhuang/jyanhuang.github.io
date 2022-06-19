@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=960">
+<title>SP2022 SIDNet</title>
+<link rel="stylesheet" type="text/css" href="css/site.20180920212709.css">
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/site.20180920212709-lteIE7.css">
+<![endif]-->
+</head>
+<body id="body">
+<div class="pos vis section">
+<div class="vis-2 pos-2 size cont">
+<p class="para"><span class="font">SIDNet: A single image dedusting network with color cast correction</span></p>
+</div>
+<div class="vis-2 pos-3 size-2 cont-2">
+<div class="vis-2 pos-4 size-3 cont-3">
+<p class="para-2"><span class="font-2"><a href="https://jyanhuang.github.io">Jiayan Huang </a></span></p>
+</div>
+<div class="vis-2 pos-5 size-3 cont-4">
+<p class="para-2"><span class="font-2"><a href="https://">Haiping Xu</a></span></p>
+</div>
+<div class="vis-2 pos-6 size-3 cont-5">
+<p class="para-2"><span class="font-2"><a href="https://">Guanghai Liu</a></span></p>
+</div>
+<div class="vis-2 pos-7 size-3 cont-6">
+<p class="para-2"><span class="font-2"><a href="https://">Chuansheng Wang</a></span></p>
+</div>
+<div class="vis-2 pos-7 size-3 cont-6">
+<p class="para-2"><span class="font-2"><a href="https://">Zuoyong Li *</a></span></p>
+</div>
+<div class="vis-2 pos-7 size-3 cont-6">
+<p class="para-2"><span class="font-2"><a href="https://">Zhongyi Hu</a></span></p>
+</div>
+</div>
+<div class="vis-2 pos-8 size-4 cont-7">
+<p class="para-2"><span class="font-4"><a target="_blank" href="https://www.sciencedirect.com/science/article/abs/pii/S0165168422001529">Paper</a></span><span class="font-3"> | </span><span class="font-4"><a href="https://github.com/daooshee/BMVC2018website/blob/master/chen_bmvc18_sup.pdf">Supplementary</a></span><span class="font-3"> | </span><span class="font-4"><a href="http://www.icst.pku.edu.cn/struct/Seminar/Talk_BMVC18_Chenwei/index.html">PPT</a></span><span class="font-3"> | </span><span class="font-4"><a href="https://github.com/daooshee/BMVC2018website/blob/master/Chen_BMVC18Poster.pdf">Poster</a></span></p>
+<p class="para-3"><span class="font-5">* indicates corresponding author.</span></p>
+</div>
+<div class="vis-2 pos-9 size-5 cont-2">
+<div class="vis-2 pos-4 size-5 colwrapper">
+<div class="vis-2 pos-4 size-6 cont-8">
+<picture class="img-2">
+<source srcset="images/structure.png 1x, images/structure.png 2x">
+<img src="images/structure.png" alt="" class="js img">
+</picture>
+</div>
+<div class="vis-2 pos-10 size-7 cont-9">
+<p class="para-4"><span class="font-3">Figure 1: The proposed framework for SIDNet. </span></p>
+</div>
+</div>
+</div>
+<div class="vis-2 pos-11 size-8 cont">
+<p class="para-5"><span class="font-6">Abstract</span></p>
+<p class="para-4"><span class="font-3">computer vision tasks. In this paper, we proposed a dedusting network with color cast correction for a single dusty image (SIDNet). The SIDNet contains several dust-aware representation extraction (DustAre) modules with the same structure. Each DustAre module contains two branches. The first branch encodes the input to estimate global veiling-light and local spatial information. The second branch generates a dust-aware map and fuses the global veiling-light, the local spatial information and the dust-aware map to generate the output. To further improve real dusty image dedusting performance, the SIDNet intro- duces a color cast correction scheme to our neural network. After considering that the average chro- maticity values of a dusty image in CIELAB color space are usually larger than those of a clean (dust-free) image, the SIDNet defines a new loss function to better guide the network training. Additionally, we also construct a new synthetic dusty image dataset for network training, which additionally considers the scene depth relationship between real dusty image and dust-free image. Experiments on synthetic and real dusty images show that the SIDNet achieves better dedusting performance compared to state-of-the- art image restoration methods.</span></p>
+<p class="para-4"><span class="font-3">&nbsp;</span></p>
+<p class="para-5"><span class="font-6">Subjective Results</span><span class="font-3">&nbsp;</span></p>
+<p class="para-4"><span class="font-3">We compare our SIDNet with seven state-of-the-art methods, including LPnet [1], RGNet [2], AODNet [3], FFANet[4], Wang et al. [5], HardGAN [6], and FFNet [7]. Fig. 2 shows visual comparison on eight real dusty images.</span></p>
+</div>
+<div class="vis-2 pos-12 size-9 cont">
+<picture class="img-4">
+<source srcset="images/Fig11.png 1x, images/Fig11.png 2x">
+<img src="images/Fig11.png" alt="" class="js-2 img-3">
+</picture>
+</div>
+<div class="vis-2 pos-13 size-10 cont">
+<p class="para-4"><span class="font-3">Figure 2: Visual image dedusting results of different methods on real dusty images.</span></p>
+</div>
+<div class="vis-2 pos-14 size-11 cont">
+<p class="para-4"><span class="font-3">We compare our SIDNet with seven methods on edge extraction task. Fig. 3 shows visual comparison on one real dusty images.</span></p>
+</div>
+<div class="vis-2 pos-15 size-12 cont">
+<picture class="img-6">
+<source srcset="images/Fig12.jpg 1x, images/Fig12.jpg 2x">
+<img src="images/Fig12.jpg" alt="" class="js-3 img-5">
+</picture>
+</div>
+<div class="vis-2 pos-16 size-13 cont-2">
+<div class="vis-2 pos-4 size-13 colwrapper">
+<div class="vis-2 pos-17 size-10 cont-10">
+<p class="para-4"><span class="font-3">Figure 3: Edge extraction results on a real dedusted sample.</span></p>
+</div>
+<div class="vis-2 pos-18 size-11 cont-11">
+<p class="para-4"><span class="font-3">In Fig. 4 we illustrate a similar image pairs for verifying the superiority of SIDNet on local keypoint matching task.</span></p>
+</div>
+</div>
+</div>
+<div class="vis-2 pos-19 size-14 cont">
+<picture class="img-8">
+<source srcset="images/Fig13.jpg 1x, images/Fig13.jpg 2x">
+<img src="images/Fig13.jpg" alt="" class="js-4 img-7">
+</picture>
+</div>
+<div class="vis-2 pos-20 size-15 cont">
+<p class="para-4"><span class="font-3">Figure 4: Number of matching points on a pair of similar scenes.</span></p>
+</div>
+<div class="vis-2 pos-14 size-11 cont-12">
+<p class="para-4"><span class="font-3">See </span><span class="font-4"><a href="https://">supplementary</a></span><span class="font-3"> for more results.</span></p>
+</div>
+<div class="vis-2 pos-14 size-16 cont-13">
+<p class="para-5"><span class="font-6">Download Links</span><span class="font-3">&nbsp;</span></p>
+<ul class="pos-21">
+<li class="para-6"><span class="font-7">&bull; </span><span class="font-7">Datasets</span></li>
+</ul>
+<p class="para-4"><span class="font-3">&nbsp;&nbsp;&nbsp;&nbsp;LOw Light paired dataset (LOL): </span><span class="font-4"><a href="https://drive.google.com/open?id=157bjO1_cFuSd0HWDUuAmcHRJDVyWpOxB">Google Drive</a></span><span class="font-3">, </span><span class="font-4"><a href="https://pan.baidu.com/s/1ABMrDjBTeHIJGlOFIeP1IQ">Baidu Pan (Code:acp3)</a></span></p>
+<p class="para-4"><span class="font-3">&nbsp;&nbsp;&nbsp;&nbsp;Synthetic Image Pairs from Raw Images: </span><span class="font-4"><a href="https://drive.google.com/open?id=1G6fi9Kiu7CDnW2Sh7UQ5ikvScRv8Q14F">Google Drive</a></span><span class="font-3">, </span><span class="font-4"><a href="https://pan.baidu.com/s/1drsMAkRMlwd9vObAM_9Iog">Baidu Pan</a></span></p>
+<p class="para-4"><span class="font-3">&nbsp;&nbsp;&nbsp;&nbsp;Testing Images: </span><span class="font-4"><a href="https://drive.google.com/open?id=1OvHuzPBZRBMDWV5AKI-TtIxPCYY8EW70">Google Drive</a></span><span class="font-3">, </span><span class="font-4"><a href="https://pan.baidu.com/s/1G2qg3oS12MmP8_dFlVRRug">Baidu Pan</a></span></p>
+<ul class="pos-21">
+<li class="para-6"><span class="font-7">&bull; </span><span class="font-7">Codes</span></li>
+</ul>
+<p class="para-4"><span class="font-3">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="font-4"><a href="https://github.com/weichen582/RetinexNet">Github</a></span></p>
+<p class="para-4"><span class="font-3">&nbsp;</span></p>
+<p class="para-5"><span class="font-6">Citation</span></p>
+<p class="para-7"><span class="font-3">@article{HUANG2022108612,</span></p>
+<p class="para-7"><span class="font-3">&nbsp;&nbsp;title={SIDNet: A single image dedusting network with color cast correction},</span></p>
+<p class="para-7"><span class="font-3">&nbsp;&nbsp;author={Jiayan Huang and Haiping Xu and Guanghai Liu and Chuansheng Wang and Zhongyi Hu and Zuoyong Li},</span></p>
+<p class="para-7"><span class="font-3">&nbsp;&nbsp;journal={Signal Processing},</span></p>
+<p class="para-7"><span class="font-3">&nbsp;&nbsp;year={2022},</span></p>
+<p class="para-7"><span class="font-3">}</span><span class="font-3">&nbsp;</span></p>
+<p class="para-4"><span class="font-3">&nbsp;</span></p>
+<p class="para-5"><span class="font-6">Reference</span></p>
+<p class="para-4"><span class="font-3">[1] X. Fu, B. Liang, Y. Huang, X. Ding, J. Paisley, Lightweight pyramid networks for image deraining, IEEE Trans. Neural Netw. Learn. Syst. 31 (6) (2019) 1794–1807.</span></p>
+<p class="para-4"><span class="font-3">[2] Z. Fan, H. Wu, X. Fu, Y. Huang, X. Ding, Residual-guide network for single image deraining, 26th ACM Int. Conf. Multimedia (2018) 1751–1759.</span></p>
+<p class="para-4"><span class="font-3">[3] B. Li, X. Peng, Z. Wang, J. Xu, D. Feng, AOD-Net: all-in-one dehazing network, IEEE Int. Conf. Comput. Vision (2017) 4770–4778.</span></p>
+<p class="para-4"><span class="font-3">[4] X. Qin, Z. Wang, Y. Bai, X. Xie, H. Jia, FFA-Net: feature fusion attention network for single image dehazing, AAAI Conf. Artif. Intell. 34 (7) (2020) 11908–11915.</span></p>
+<p class="para-4"><span class="font-3">[5] J. Wang, Y. Pang, Y. He, C. Liu, Enhancement for dust-sand storm images, Int. Conf. Multimedia Model. (2016) 842–849.</span><span class="font-3">&nbsp;</span></p>
+<p class="para-4"><span class="font-3">[6] Q. Deng, Z. Huang, C.-C. Tsai, C.-W. Lin, HardGAN: a haze-aware representation distillation GAN for single image dehazing, Eur. Conf. Comput. Vision (2020) 722–738.</span></p>
+<p class="para-4"><span class="font-3">[7] J. Huang, Z. Li, C. Wang, Z. Yu, X. Cao, FFNet: a simple image dedusting network with feature fusion, Concurrency Comput. (2021) e6462.</span></p>
+
+</div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/index.20180920212709.js"></script>
+<script type="text/javascript">
+var ver=RegExp(/Mozilla\/5\.0 \(Linux; .; Android ([\d.]+)/).exec(navigator.userAgent);if(ver&&parseFloat(ver[1])<5){document.getElementsByTagName('body')[0].className+=' whitespacefix';}
+</script>
+</body>
+</html>
